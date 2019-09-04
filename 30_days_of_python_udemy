@@ -1,0 +1,267 @@
+a = [1,2,3]
+
+for i in a:
+  print(i**2)
+  
+for i in a:
+  if (i**2)%3 == 0:
+    print("your number is 9 b")
+    print(i)
+    
+for i in a:
+  if i == 2:
+    print("ye")
+  elif i == 1:
+    print("oops")
+  else:
+    print(i)
+    
+d = ["Justin","Apple","Food",134,"Another",186116]
+e = []
+f = []
+
+for i in d:
+  if isinstance(i, int):
+    e.append(i)
+  else:
+    f.append(i)
+print(e)
+print(f)
+
+isinstance(3, int)
+
+x = 0
+d[x+3]
+
+for item in d:
+  print(d[x])
+  x+=1
+  
+e=[]
+
+x=0
+for item in d:
+  if isinstance(item, int):
+    e.append(item)
+    d.pop(x)
+  x+=1
+  
+print(d,e)
+
+itemy = ["Mic", "Phone", 323.12,3152.1341, "Justin","Bag","Seboro","15819"]
+itemy
+
+isinstance(123.123, int)
+isinstance(123.123, float)
+
+itemki = ["AB","BC","CD","DE","BN","XD","abc","Acd"]
+
+itemki.sort()
+itemki
+
+itemki.sort(key=str.lower)
+itemki
+
+itemki.sort(key=str.lower, reverse=True)
+itemki
+
+new_itemki=sorted(itemki, key=str.lower, reverse=True)
+new_itemki
+
+cyferki=[123,132,12.13,13.12,34134,1325412.123]
+cyferki
+
+nowcyferki = sorted(cyferki, reverse=True)
+nowcyferki
+
+sum(nowcyferki)
+len(nowcyferki)
+total = sum(nowcyferki)
+average = total/len(nowcyferki)
+
+average
+
+total
+
+#####################
+
+items = ["Mic", "Phone", 323.12, 32123.12, "Justin", "Bag", "Cliff Brzesiznk", 123]
+
+str_items = []
+num_items = []
+
+for i in items:
+    if isinstance(i, float) or isinstance(i, int):
+        num_items.append(i)
+    elif isinstance(i, str):
+        str_items.append(i)
+    else:
+        pass 
+
+print(str_items)
+print(num_items)
+
+def parse_lists(abc):
+  num_list_items = []
+  str_list_items = []
+  for i in abc:
+      if isinstance(i, float) or isinstance(i, int):
+          num_list_items.append(i)
+      elif isinstance(i, str):
+          str_list_items.append(i)
+      else:
+          pass 
+  return str_list_items, num_list_items
+  
+print(parse_lists(items))
+
+list_item = [123, 3124, "affaa"]
+items2 = ["mic", "drumz", list_item]
+items3 = ["Mic", "Phone", 323.12, 32123.12, "Justin", "Bag", "Cliff Brzesiznk", 123]
+
+print(parse_lists(items2))
+
+def mysum(my_num_list):
+  total = 0
+  for i in my_num_list:
+    if isinstance(i, float) or isinstance(i, int):
+        total += i
+  return total
+
+mysum(items3)
+
+def countnums(my_num_list):
+  total = 0
+  for i in my_num_list:
+    if isinstance(i, float) or isinstance(i, int):
+        total += 1
+  return total
+  
+def myavg(my_num_list):
+  thesum = mysum(my_num_list)
+  num_of_items = countnums(my_num_list)
+  return thesum / (num_of_items * 1.0)
+
+myavg(items3)
+
+text = "This is {variable_a} formatted string".format(variable_a="variable based")
+print(text)
+
+"this is a {var} string".format(var="nice")
+
+"my name is {name}".format(name="Jeff")
+
+my_name = "jeff"
+
+"My name is {the_name}".format(the_name = my_name)
+
+"My name is {the_name}\n{the_name} is {the_name}".format(the_name = my_name)
+
+print("My name is {the_name}\n{the_name} is {the_name}".format(the_name = my_name))
+
+text = "to jest argument {0}".format("here", "muda", "ora")
+text
+
+text = " {0} {0} {0} {0}\n{0} {0} {0} {0}".format("muda")
+print(text)
+
+jojo = "{0}{0}{0}{0}{0}{0}{0}{0}\n{0}{0}{0}{0}\n{0}{0}{0}{0}\n{0}{0}{0}{0}\n{1}{1}{1}{1}{1}{1}\n{1}{1}{1}{1}{1}\n{2}{2}{2}{2}{2}{2}{2}\n{2}{2}{2}{2}{2}{2}".format("here", "muda", "ora")
+print(jojo)
+
+bc = "This is!\n{0}{0}{0}{0}{0}\n{1}{1}{1}{1}{1}\n{2}{2}{2}{2}{2}"
+print(bc.format("ora!", "muda!", "here!"))
+
+"My name is %s!" %("Jeff")
+
+texxt = "The %%s format string is not as %s, but still very %s" %("robust", "useful")
+texxt
+
+text = "2 decimal places: %.2f" %(20)
+
+print(text)
+
+text = "7 decimal places: %.7f" %(20)
+print(text)
+
+text = "2 decimal places rounding: %.2f" %(20.65165418949616516454)
+print(text)
+
+import datetime
+today = datetime.date.today()
+print(today)
+
+datetime.datetime.now()
+
+text = "This is {variable_a} formatting string".format(variable_a="variable based")
+print(text)
+
+"my name is {name}".format(name="sebastian")
+
+my_name = "Jeff"
+"Name is {the_name}".format(the_name=my_name)
+
+import datetime
+default_names = ["Justin", "john", "Emilee", "Jim", "Ron", "Sandra", "veronica", "Whitney", "Felix"]
+default_amounts = [123.32, 94.23, 124.32, 323.4, 23, 322.122323, 32.4, 99.99, 399.99]
+
+unf_message = """Hi {name}!
+Thank you for the purchase on {date}.We hope you are excited about using it. Just as a reminder the purchase total was ${total}.
+Have a great one!
+
+Team CFE
+"""
+
+def make_messages(names, amounts):
+  messages = []
+  if len(names) == len(amounts):
+    i = 0
+    today = datetime.date.today()
+    text = '{today.month}/{today.day}/{today.year}'.format(today=today)
+    for name in names:
+      new_amount = "%.2f" %(amounts[i])
+      new_msg = unf_message.format(
+        name=name,
+        date=text,
+        total=new_amount
+      )
+      i += 1
+      print(new_msg)
+      
+make_messages(default_names, default_amounts)
+
+class Dog:
+  name = "Jon"
+  color = "brown" 
+  
+Dog()
+
+instance = Dog()
+obj = Dog()
+object = Dog()
+
+obj.name = 'Snow'
+obj.name
+
+instance.name
+
+obj.name
+
+class Dog:
+  name = "Jon"
+  color = "brown" 
+  def get_color(self):
+    print(self.name)
+    return self.color
+    
+obj = Dog()
+
+obj.get_color()
+
+
+obj = Dog()
+obj == self
+
+class MojaKlasa:
+      zmienna = "blah"
+      def funkcja(self):
+           print "To jest wiadomość wewnątrz klasy."
